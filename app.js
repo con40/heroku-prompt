@@ -44,7 +44,7 @@ app.use(function (err, req, res, next) {
   res.status(status);
   const message = status < 500 ? err.message : 'Something unexpected happened';
 
-  if (status >= 500) {
+  if (status /*>= 500*/) {
     logger.error(err);
   }
 
