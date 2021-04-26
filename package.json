@@ -1,0 +1,25 @@
+{
+  "name": "auth0-prompt-app",
+  "private": true,
+  "description": "Auth0 Prompt App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "auth0": "^2.34.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-handlebars": "^5.3.0",
+    "express-openid-connect": "^2.3.1",
+    "heroku-logger": "^0.3.3",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0"
+  }
+}

@@ -1,0 +1,35 @@
+<form method="POST" class="c4bb22c79 cc53b6b21">
+  <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+
+  <div class="c48b02010 c03b7df03">
+    <div class="c82135ae4">
+      {{#if given_name}}
+        <input type="hidden" name="given_name" value="{{given_name}}" />
+      {{else}}
+        {{#> textbox_field name="given_name" required=true autoComplete="given-name" autoFocus=true}}
+        First <strong>name</strong>
+        {{/textbox_field}}
+      {{/if}}
+    
+      {{#if family_name}}
+        <input type="hidden" name="family_name" value="{{family_name}}" />
+      {{else}}
+        {{#> textbox_field name="family_name" required=true autoComplete="family-name"}}
+        Last name
+        {{/textbox_field}}
+      {{/if}}
+
+      {{#if accept_tnc}}
+        <input type="hidden" name="accept_tnc" value="{{accept_tnc}}" />
+      {{else}}
+        {{#> checkbox_field name="accept_tnc" value="on" required=true}}
+        Sure, I accept the <a class="cae35db32 c4ca195e3 cc3419fcc" href="/tnc" target="tnc">terms &amp; conditions</a>
+        {{/checkbox_field}}
+      {{/if}}  
+    </div>
+  </div>
+
+  <div class="c27fbdf34">
+    <button type="submit" name="action" value="default" class="cdc162597 c9ade4631 c013e8be5 c1460af88 cf69aa3a7">Continue</button>
+  </div>
+</form>

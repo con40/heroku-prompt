@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <html lang="en" >
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.46.14/css/main.cdn.min.css" />
+
+    <style id="custom-styles-container">
+
+body {
+  background: {{ config.colors.page_background }};
+  font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+}
+.caf10cc70 {
+  background: {{ config.colors.page_background }};
+}
+.c404c83d8.c302c4ba1 {
+  background: #D00E17;
+}
+.c404c83d8.ccbc147ad {
+  background: #0A8852;
+}
+.c9ade4631 {
+  background-color: {{ config.colors.primary }};
+  color: #333c4d;
+}
+.c9ade4631 a,
+.c9ade4631 a:visited {
+  color: #333c4d;
+}
+.c87085aeb {
+  background-color: #0A8852;
+}
+.c8a6debc4 {
+  background-color: #D00E17;
+}
+.input.c911ad6ee {
+  border-color: #D00E17;
+}
+.error-cloud {
+  background-color: #D00E17;
+}
+.error-fatal {
+  background-color: #D00E17;
+}
+.error-local {
+  background-color: #D00E17;
+}
+.c03b79ab4.c41a3276a {
+  background-color: #D00E17;
+  border-color: #D00E17;
+}
+.c03b79ab4.c41a3276a::before {
+  border-bottom-color: #D00E17;
+}
+.c03b79ab4.c41a3276a::after {
+  border-bottom-color: #D00E17;
+}
+#alert-trigger {
+  background-color: #D00E17;
+}
+    </style>
+    <style>
+      /* By default, hide features for javascript-disabled browsing */
+      /* We use !important to override any css with higher specificity */
+      /* It is also overriden by the styles in <noscript> in the header file */
+      .no-js { display: none !important; }
+    </style>
+    <noscript>
+      <style>
+        /* We use !important to override the default for js enabled */
+        /* If the display should be other than block, it should be defined specifically here */
+        .js-required { display: none !important; }
+        .no-js { display: block !important; }
+      </style>
+    </noscript>
+    
+    <title>{{title}}</title>
+  </head>
+  
+  <body>
+    <div class="caf10cc70 c34b5994b">
+  
+      <main class="ca7fc2b01 login">
+        <section class="cb38f2048 _prompt-box-outer c471522a0">
+          <div class="ce794cbce c66a01acc">
+            
+          
+            <div class="c266867c7">
+              <header class="c8862d962 ca3249a6c">
+                <div title="avaya-sailpoint-demo" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+                
+                <img class="cb5aa2e9b c28c25e87" id="prompt-logo-center" src="{{config.icon}}" alt="{{title}}" />
+
+                <h1 class="c0724664f c67d39740">{{title}}</h1>
+
+                <div class="c8b252efb cb83f795c">                  
+                  <p class="cf65953dc c1728f1a3">{{message}}</p>
+                </div>
+              </header>
+            
+              <div class="c507241b0 cce897d9b">
+                
+                {{{body}}}
+                
+              </div>
+            </div>
+          </div>
+          
+        </section>
+      </main>
+
+<script id="client-scripts" type="text/javascript">
+!function(){var t,e,n,r={exports:function(n,r){var a={};function i(t,e,n,r){return t.addEventListener(e,n,r)}function c(t){return"string"==typeof t}function o(t,e){return t.getAttribute(e)}function s(t,e,n){return t.setAttribute(e,n)}return{addClass:function(t,e){if(t.classList)return t.classList.add(e);var n=t.className.split(" ");-1===n.indexOf(e)&&(n.push(e),t.className=n.join(" "))},toggleClass:function(t,e){if(t.classList)return t.classList.toggle(e);var n=t.className.split(" "),r=n.indexOf(e);-1!==r?n.splice(r,1):n.push(e),t.className=n.join(" ")},addClickListener:function(t,e){return i(t,"click",e)},addEventListener:i,getAttribute:o,getElementById:function(t){return r.getElementById(t)},getParent:function(t){return t.parentNode},isString:c,loadScript:function(t){var e=r.createElement("script");e.src=t,e.async=!0,r.body.appendChild(e)},poll:function(t){var i=t.interval||2e3,e=t.url||n.location.href,c=t.condition||function(){return!0},o=t.onSuccess||function(){},s=t.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",e),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var t="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return c(t)?o():setTimeout(r,i)}if(429!==a.status)return s({status:a.status,responseText:a.responseText});var e=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=e-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:function(t,e){return c(t)?r.querySelector(t):t.querySelector(e)},querySelectorAll:function(t,e){var n=c(t)?r.querySelectorAll(t):t.querySelectorAll(e);return Array.prototype.slice.call(n)},removeClass:function(t,e){if(t.classList)return t.classList.remove(e);var n=t.className.split(" "),r=n.indexOf(e);-1!==r&&(n.splice(r,1),t.className=n.join(" "))},setAttribute:s,removeAttribute:function(t,e){return t.removeAttribute(e)},swapAttributes:function(t,e,n){var r=o(t,e),a=o(t,n);s(t,n,r),s(t,e,a)},setGlobalFlag:function(t,e){a[t]=!!e},getGlobalFlag:function(t){return!!a[t]},preventFormSubmit:function(t){t.stopPropagation(),t.preventDefault()},matchMedia:function(t){return"function"!=typeof n.matchMedia&&n.matchMedia(t).matches},dispatchEvent:function(t,e){t.dispatchEvent(e)},setTimeout:setTimeout}}}.exports(window,document);((t={}).exports=function(n,t,a,i,c,o){t("div.c7d23b582.password").forEach(function(t){var r,e=n(t,"input");a(t,(r=e,function(t){var e=t.target;if(e.classList.contains("c35664821")&&e.classList.contains("password")){r.type="password"===r.type?"text":"password";var n=o(r);"text"===r.type?i(n,"cd81bd769"):c(n,"cd81bd769")}}))})},t.exports)(r.querySelector,r.querySelectorAll,r.addClickListener,r.addClass,r.removeClass,r.getParent),{exports:function(t,r,a,e){var n=t(".ca7fc2b01"),i=t("#alert-trigger"),c=t(".cabef11c9"),o=t(".c6466ba89"),s=!1;i&&o&&n&&e(n,function(t){var e=t.target===i,n=o.contains(t.target);return e&&!s?(r(c,"cd81bd769"),void(s=!0)):e&&s||s&&!n?(a(c,"cd81bd769"),void(s=!1)):void 0})}}.exports(r.querySelector,r.addClass,r.removeClass,r.addClickListener),((e={}).exports=function(t,r,a,i,c,o){var e,n,s=r("div[data-recaptchav2-sitekey]"),u=r("div[data-recaptchav2-sitekey] input"),l=r("#ulp-recaptchav2");function d(t){return u.setAttribute("value",t)}function f(){return window&&window.grecaptcha&&"function"==typeof window.grecaptcha.render}function p(t,e){if(t&&t.getBoundingClientRect){if(!o("(max-width: 480px)"))return l.style.transform="",void(l.style.height="");(void 0===e||isNaN(e))&&(e=1.4);var n=72*e;l.style.transform="scale("+e+")",l.style.height=n+"px",l.style.width="10px",s.clientWidth+8<t.getBoundingClientRect().width&&p(t,e-.01)}}s&&(t("https://www.google.com/recaptcha/api.js?hl="+s.getAttribute("data-recaptchav2-lang")),e=function(){var t,e,n;f()&&(t=window.grecaptcha.render(l,{sitekey:s.getAttribute("data-recaptchav2-sitekey"),"expired-callback":function(){d(""),a(s,"c41a3276a"),window.grecaptcha.reset(t)},callback:function(t){d(t),i(s,"c41a3276a")}}),e=function(t){p(t),c(window,"resize",function(){p(t)})},n=setInterval(function(){var t=r("#ulp-recaptchav2 iframe");if(t)return clearInterval(n),e(t)},200))},n=setInterval(function(){if(f())return clearInterval(n),e()},200))},e.exports)(r.loadScript,r.querySelector,r.addClass,r.removeClass,r.addEventListener,r.matchMedia),((n={}).exports=function(r,t,a,i,c,o,s,u,n,l){function d(t){var e=t.target,n=o(e);e.value||l(e,"data-autofilled")?i(n,"cb70cd4fc"):c(n,"cb70cd4fc")}function f(t){var e=t.target;"onAutoFillStart"===t.animationName&&(n(e,"data-autofilled",!0),u(t.target,new Event("change",{bubbles:!0})),a(e,"keyup",p,{once:!0}))}function p(t){var e=t.target;n(e,"data-autofilled","")}if(r("body._simple-labels"))return t(".c4027ec2d.no-js").forEach(function(t){c(t,"no-js")}),void t(".c4027ec2d.js-required").forEach(function(t){i(t,"cb64497a8")});t(".c7d23b582:not(.c8fc9509e):not(disabled)").forEach(function(t){i(t,"c983d0803");var e,n=r(t,".input");n.value&&i(t,"cb70cd4fc"),a(t,"change",d),a(n,"blur",d),a(n,"animationstart",f),e=n,s(function(){e.value&&u(e,new Event("change",{bubbles:!0}))},100)})},n.exports)(r.querySelector,r.querySelectorAll,r.addEventListener,r.addClass,r.removeClass,r.getParent,r.setTimeout,r.dispatchEvent,r.setAttribute,r.getAttribute),{exports:function(t,e,n,r,a,i){function c(t){var e=n("submitted");r("submitted",!0),e?a(t):"cae440b97"===i(t.target,"data-provider")&&setTimeout(function(){r("submitted",!1)},2e3)}var o=t("form");o&&o.forEach(function(t){e(t,"submit",c)})}}.exports(r.querySelectorAll,r.addEventListener,r.getGlobalFlag,r.setGlobalFlag,r.preventFormSubmit,r.getAttribute),{exports:function(t,e,n){var r=e("div[aria-live=assertive].c03b79ab4 li.c5b397338");r&&r.length&&n(function(){for(var t=0;t<r.length;t++)r[t].innerHTML=r[t].innerText+"."},200);var a=t("div[aria-live=assertive].c404c83d8 p.c7406b37b");a&&n(function(){a.innerHTML=a.innerText+"."},200)}}.exports(r.querySelector,r.querySelectorAll,r.setTimeout)}();
+</script>
+    </div>
+  </body>
+</html>
