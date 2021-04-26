@@ -43,7 +43,7 @@ router.get('/', csurfProtection, (req, res) => {
 
   res.render('missing_fields', {
     title: 'Account Setup',
-    message: 'We just need a bit more information so we can finish setting up your account',
+    message: 'Welcome to Ryobi.com, please agree to the below so we can extend your account to this site.',
     given_name: profile.root.given_name,
     family_name: profile.root.family_name,
     accept_tnc: profile.user_metadata.tnc_v1_accepted ? 'on' : '',
